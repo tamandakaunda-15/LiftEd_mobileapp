@@ -35,31 +35,34 @@ This project is designed as a collaborative effort. A partnership with the Minis
 *   **Guidance and Expertise:** Integrating the app into the existing educational framework and procedures.
 
 ##  Repository Structure
-<details>
-<summary>
 .
 ├── backend/ # Back-end API (e.g., Node.js with Express)
+  
 │ ├── app/ # Application logic
 │ ├── models/ # Database models
 │ ├── routes/ # API routes
 │ └── ...
+
 ├── frontend/ # Mobile-optimized web app (e.g., React)
 │ ├── src/ # Source code
 │ ├── public/ # Static assets
 │ └── ...
+
 ├── data/ # Placeholder for proxy or pilot data
 │ ├── proxy_data/ # High-level or public data for proof-of-concept
 │ └── pilot_data/ # Secure folder for anonymized pilot data (future)
+
 ├── ml_model/ # Machine learning model pipeline
 │ ├── notebooks/ # Jupyter notebooks for data exploration and modeling
 │ ├── model.py # Python script for the prediction model
 │ └── ...
+
 ├── README.md # This file
+
 ├── requirements.txt # Python dependencies for ML model
+
 ├── package.json # Node.js dependencies
 └── ...
-</summary>summary>
-</details>
 
 ##  Milestones and Future Work
 *   **Q4 2025: Proof-of-Concept:** Develop a functional prototype using publicly available proxy data to demonstrate the model's capabilities.
