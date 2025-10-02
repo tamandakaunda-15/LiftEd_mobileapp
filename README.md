@@ -58,7 +58,8 @@ This project is designed as a collaborative effort. A partnership with the Minis
 ├── requirements.txt # Python dependencies for ML model
 ├── package.json # Node.js dependencies
 └── ...
-<summary/>
+</summary>summary>
+</details>
 
 ##  Milestones and Future Work
 *   **Q4 2025: Proof-of-Concept:** Develop a functional prototype using publicly available proxy data to demonstrate the model's capabilities.
