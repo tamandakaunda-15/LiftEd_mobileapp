@@ -35,7 +35,8 @@ This project is designed as a collaborative effort. A partnership with the Minis
 *   **Guidance and Expertise:** Integrating the app into the existing educational framework and procedures.
 
 ##  Repository Structure
-.
+```
+
 ├── backend/ # Back-end API (e.g., Node.js with Express)
   
 │ ├── app/ # Application logic
@@ -63,6 +64,8 @@ This project is designed as a collaborative effort. A partnership with the Minis
 
 ├── package.json # Node.js dependencies
 └── ...
+
+```
 
 ##  Milestones and Future Work
 *   **Q4 2025: Proof-of-Concept:** Develop a functional prototype using publicly available proxy data to demonstrate the model's capabilities.
