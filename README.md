@@ -1,6 +1,6 @@
 #  LiftEd: Predicting Student Dropout in Malawi
 
-**Tagline:** A data-driven mobile application to combat student dropout in Malawi.
+ A data-driven mobile application to combat student dropout in Malawi.
 
 ##  Project Overview
 LiftEd is a mobile-first web application designed to address the persistent challenge of student dropout in Malawi's primary and secondary schools. By providing a streamlined system for digitizing and tracking student attendance, LiftEd powers a machine learning model that proactively identifies and flags students at risk of dropping out. This tool is not just an attendance tracker; it is an early warning system that empowers school administrators and the Ministry of Education to implement timely, targeted interventions.
