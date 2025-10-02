@@ -37,14 +37,14 @@ This project is designed as a collaborative effort. A partnership with the Minis
 ##  Repository Structure
 ```
 
-├── backend/ # Back-end API (e.g., Node.js with Express)
+├── backend/ # Back-end API (Firebase)
   
 │ ├── app/ # Application logic
 │ ├── models/ # Database models
 │ ├── routes/ # API routes
 │ └── ...
 
-├── frontend/ # Mobile-optimized web app (e.g., React)
+├── frontend/ # Mobile-optimized web app (Flutter)
 │ ├── src/ # Source code
 │ ├── public/ # Static assets
 │ └── ...
