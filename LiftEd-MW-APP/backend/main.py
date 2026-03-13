@@ -11,6 +11,7 @@ from fastapi.middleware.cors import CORSMiddleware
 from pydantic import BaseModel, Field, field_validator
 import os
 from supabase import create_client, Client
+app = FastAPI()
 @app.get("/")
 def home():
     return {"status": "LiftEd API is Live", "model": "LSTM-v1"}
