@@ -3,11 +3,12 @@ uvicorn==0.30.0
 pandas==2.2.2
 scikit-learn==1.4.2
 numpy==1.26.4
+tensorflow-cpu==2.16.1
 pydantic>=2.7.0
 pydantic-settings>=2.2.0
 python-dotenv==1.0.1
 python-multipart==0.0.9
-requests==2.32.0
+requests==2.32.3
 supabase==2.10.0
 joblib==1.4.2
 imbalanced-learn==0.12.3
