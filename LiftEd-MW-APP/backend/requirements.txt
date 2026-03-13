@@ -1,0 +1,14 @@
+fastapi==0.129.0
+uvicorn==0.40.0
+pandas==2.3.3
+scikit-learn==1.8.0
+numpy==2.2.6
+pydantic==2.10.0
+pydantic-settings==2.7.0
+python-dotenv==1.0.1
+python-multipart==0.0.9
+requests==2.32.0
+supabase==2.10.0
+joblib==1.5.3
+imbalanced-learn==0.14.1
+starlette==0.52.1
