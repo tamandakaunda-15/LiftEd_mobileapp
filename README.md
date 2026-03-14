@@ -52,7 +52,7 @@ The model maintains high reliability in confirming students who are on a stable 
 
 
 ### Why 5 Rounds?
-The model utilizes a 5-term temporal window to ensure high predictive validity. By analyzing a sequence of 5 rounds, the LSTM can distinguish between temporary academic fluctuations and sustained downward trends, allowing the system to intervene before a student reaches a **"point of no return"**.
+The model utilizes a 5-term temporal window to ensure high predictive validity. By analyzing a sequence of 5 rounds, the LSTM can distinguish between temporary academic fluctuations and sustained downward trends, allowing the system to intervene before a student reaches a **" point of no return"**.
 
 
 #  Repository Structure
@@ -61,20 +61,16 @@ The model utilizes a 5-term temporal window to ensure high predictive validity. 
 ├── backend/ # Back-end API (Firebase)
   
 │ ├── app/ # Application logic
-│ ├── models/ # Database models
-│ ├── routes/ # API routes
+│ ├── dashboard/ # website-optimized web app (React, Tailwind CSS) containing (headteacher, teacher, and PEA dashboards)
+│ ├── routes/ # API routes with Node.Js
 │ └── ...
 
-├── frontend/ # Mobile-optimized web app (Flutter)
-│ ├── src/ # Source code
-│ ├── public/ # Static assets
+├── backend/ # Model file and requirements
+│ ├── main.py/ # fast api for lstm model
+│ ├── requirements.txt/ # List all needed libraries for installation
 │ └── ...
 
-├── data/ # Placeholder for proxy or pilot data
-│ ├── proxy_data/ # High-level or public data for proof-of-concept
-│ └── pilot_data/ # Secure folder for anonymized pilot data (future)
-
-├── ml_model/ # Machine learning model pipeline
+├── ml_model notebook/ # Machine learning model pipeline
 │ ├── notebooks/ # Jupyter notebooks for data exploration and modeling
 │ ├── model.py # Python script for the prediction model
 │ └── ...
