@@ -37,6 +37,22 @@ This project leverages a predictive analytics pipeline, adapting best practices 
 *   **Web Development:** A full-stack web application, including a mobile-optimized teacher interface and a dashboard for administrators, will serve as the front end of the system.
 
 
+# Model Performance Highlights
+The system’s predictive engine (LSTM) has been optimized for the Malawian educational context, achieving high-reliability metrics in identifying at-risk students across 5 terms.
+
+***Overall Accuracy*** : 70% > The model demonstrates a strong ability to correctly classify student outcomes across the dataset.
+
+***At-Risk Detection (Recall)***: 80% > Using an optimized sensitivity threshold, the system successfully identifies 8 out of 10 students who are actually at risk of dropping out, allowing for early intervention.
+
+***Precision Stability***: 0.79 (Class 0)
+
+The model maintains high reliability in confirming students who are on a stable academic path, reducing unnecessary alarm for school administrators.
+
+
+### Why 5 Rounds?
+The model utilizes a 5-term temporal window to ensure high predictive validity. By analyzing a sequence of 5 rounds, the LSTM can distinguish between temporary academic fluctuations and sustained downward trends, allowing the system to intervene before a student reaches a **"point of no return"**.
+
+
 #  Repository Structure
 ```
 
@@ -70,7 +86,7 @@ This project leverages a predictive analytics pipeline, adapting best practices 
 
 ```
 
-# System Access & Governance Flow
+# System Access & Governance Flow(Student Data Security)
 A multi-tier security architecture designed for the Malawi education ecosystem.
 
 To maintain data integrity and student privacy, LiftEd utilizes a top-down registration hierarchy:
@@ -129,7 +145,7 @@ If you wish to test the security hierarchy from scratch:
 
 # Live System Links
 
-[Production Frontend](https://liftedmobileapp-production.up.railway.app)
+[Full Stack Deployment](https://liftedmobileapp-production.up.railway.app)
 
 [ML API Documentation](https://lifted-dropout-api.onrender.com/docs)
 
