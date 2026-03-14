@@ -161,6 +161,7 @@ Responsibility: Teachers have direct access to their assigned standards (e.g., S
 
 
 ### Design Responsiveness Across Devices
+The mobile interface has been tested on multiple devices, and its intuitive design allows teachers to immediately visualize at-risk students—making early intervention practical and effective.
 [Full Testing Links](https://www.canva.com/design/DAHD4Hcwg1M/nUEXoTKDqHypgeseOdQrWQ/edit?utm_content=DAHD4Hcwg1M&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton)
 
 
@@ -217,21 +218,37 @@ Analysis: While this lowered overall accuracy to around 44% at that specific thr
 
 ### 2. Explainability and Intervention
 
-ObjectiveGoal: Provide teachers with actionable reasons why a student is at risk, rather than a "black-box" prediction.Result: Achieved. By integrating SHAP (SHapley Additive exPlanations), the system successfully maps predictions back to 15 top socio-economic and behavioral factors (e.g., "Payer: School Uniform" or "Rarely Completes Tasks").Analysis: 
+Objective/ Goal: Provide teachers with actionable reasons why a student is at risk, rather than a "black-box" prediction.Result: Achieved. By integrating SHAP (SHapley Additive exPlanations), the system successfully maps predictions back to 15 top socio-economic and behavioral factors (e.g., "Payer: School Uniform" or "Rarely Completes Tasks").Analysis: 
 
 This transforms the platform from a purely analytical tool into a decision-support system, directly fulfilling the proposal's goal of enabling targeted, resource-efficient interventions by school administrators.
 
 ### 3. Secure Governance
-Objective Goal: Protect sensitive student demographic data through strict access controls.
+Objective/ Goal: Protect sensitive student demographic data through strict access controls.
 
 Result: Achieved. The implementation of a multi-tier Role-Based Access Control (RBAC) system utilizing Supabase.
 
-Analysis: The top-down hierarchy (PEA registers Schools $\rightarrow$ Headteacher registers Teachers $\rightarrow$ Teachers access assigned Standards) successfully met the objective of modeling real-world Ministry of Education governance structures, ensuring data privacy at the classroom level.
+Analysis: The top-down hierarchy (PEA registers Schools, followed by the Headteacher registers Teachers and the Teachers access assigned Standards) successfully met the objective of modeling real-world Ministry of Education governance structures, ensuring data privacy at the classroom level.
+
 
 ### Limitations and Future Scope
 
 While the objectives were largely met, the analysis revealed that predicting human behavior from socio-economic data contains inherent noise. The model's False Positive rate indicates that many students possess severe risk factors but demonstrate unmeasured resilience and do not drop out. Future iterations of this project could improve overall precision by incorporating real-time attendance tracking and continuous academic grading into the LSTM's temporal sequence.
 
+### Future Work:
+
+    Incorporate continuous academic performance ( in core subjects) and real-time attendance for improved precision.
+
+    Expand deployment to additional districts in Malawi.
+
+    Integrate additional predictive models (e.g., ensemble learning) to reduce false positives.
+
+### Recommendations:
+
+    Schools should use LiftEd daily to track attendance and identify at-risk students early.
+
+    Training sessions for teachers and PEAs are essential for effective adoption.
+ 
+    Ministry of Education can use aggregate dashboards to inform policy and resource allocation.    
 
 ##  Acknowledgements
 This project is inspired by previous research, including the **"Student Dropout Prediction—Summative ML project,"** which provided a foundational understanding of predicting student outcomes using machine learning.
