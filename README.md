@@ -42,22 +42,71 @@ This project leverages a predictive analytics pipeline, adapting best practices 
 # Model Performance Highlights
 The system’s predictive engine (LSTM) has been optimized for the Malawian educational context, achieving high-reliability metrics in identifying at-risk students across 5 terms.
 
-***Overall Accuracy***: 70% > The model demonstrates a strong ability to correctly classify student outcomes across the dataset.
+***Overall Accuracy***: 70% > The model demonstrates a strong ability to classify student outcomes across the dataset correctly.
 
 ***At-Risk Detection (Recall)***: 80% > Using an optimized sensitivity threshold, the system successfully identifies 8 out of 10 students who are actually at risk of dropping out, allowing for early intervention.
 
 ***Precision Stability***: 0.79 (Class 0)
 
-The model maintains high reliability in confirming students who are on a stable academic path, reducing unnecessary alarms for school administrators.
+The model maintains high reliability in identifying students on a stable academic path, reducing unnecessary alarms for school administrators.
 
 
 ### Why 5 Rounds?
 The model utilizes a 5-term temporal window to ensure high predictive validity. By analyzing a sequence of 5 rounds, the LSTM can distinguish between temporary academic fluctuations and sustained downward trends, allowing the system to intervene before a student reaches a **" point of no return"**.
 
 
-#  Repository Structure
+## Model Explainability (SHAP) & Top Predictors
+To ensure the LSTM model is transparent and actionable for educators, we integrated SHAP (Shapley Additive exPlanations). Instead of acting as a "black box," the system interprets the weight of each feature, allowing Headteachers and PEAs to understand the specific socio-economic and behavioral factors driving a student's risk score.
+
+Based on the SHAP values and Feature Importance and correlation plots, extracted during training and before training respectively, the model identified the following Top 15 Predictors of student dropout in the Malawian context:
+
+### Financial & Resource Factors:
+```
+    Payer: School Uniform (Who is responsible for providing the uniform)
+
+    Payer: Food/Snacks (Financial stability regarding daily meals)
+
+    Payer: Future Fees (Confidence in funding continuous education)
+
+    Owns School Uniform (Direct indicator of material support)
+
+     Owns an exercise book (Basic learning material availability)
 ```
 
+### Academic Engagement & Behavior:
+
+```
+     Rarely Completes Tasks (Strong behavioral indicator of disengagement)
+
+     Attentive in Class (Classroom presence and focus)
+
+     Studies at Home (Supportive home learning environment)
+
+     Respects Teachers (Integration into the school social structure)
+
+     Aspiration: Continue (The student's personal educational goals)
+```
+
+### School Environment & Support:
+
+```
+    Teacher Encouragement (Impact of positive reinforcement)
+
+   Used English Textbook (Access to core curriculum materials)
+
+   Used Soc-Dev Textbook (Access to secondary curriculum materials)
+
+   Shared Math Textbook (Resource constraints in the classroom)
+
+   School Level (The critical transition between Primary and Secondary)
+```
+
+
+
+
+#  Repository Structure
+
+```
 ├── LiftEd-Malawi/ # Core container of the full stack machine project
   
 │ ├── app/ # Application logic
@@ -83,6 +132,7 @@ The model utilizes a 5-term temporal window to ensure high predictive validity. 
 └── ...
 
 ```
+
 
 # System Access & Governance Flow(Student Data Security)
 A multi-tier security architecture designed for the Malawi education ecosystem.
@@ -120,7 +170,7 @@ To test the full hierarchy of the system, use the following credentials or follo
 ### Option A: Direct Login (Recommended for Grading)
 I have pre-configured a test environment so you can immediately access the dashboards:
 
-  ***Role: Teacher (Standard 7)***
+  ***Role: Teacher (Standard 2)***
 
   ***Email: kayamba@mail.com***
 
