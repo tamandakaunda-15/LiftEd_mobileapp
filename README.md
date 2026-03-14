@@ -154,5 +154,5 @@ Database: Hosted on Supabase (PostgreSQL).
 
 ##  Acknowledgements
 This project is inspired by previous research, including the **"Student Dropout Prediction—Summative ML project,"** which provided a foundational understanding of predicting student outcomes using machine learning.
-
+1. Data Source: [Havard Dataverse](https://dataverse.harvard.edu/dataset.xhtml?persistentId=doi%3A10.7910%2FDVN%2FV4C81G&version=2.1)
 
