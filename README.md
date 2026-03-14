@@ -32,7 +32,7 @@ Student dropout in Malawi is driven by a complex mix of socioeconomic, academic,
 This project leverages a predictive analytics pipeline, adapting best practices from prior machine learning projects.
 
 **Key Components:**
-*   **Data Acquisition (Pilot Phase):** During the initial pilot program, attendance data will be collected directly from participating schools via the mobile application. This real-world dataset will be critical for training and validating the model.
+*   **Data Acquisition (Pilot Phase):** During the initial pilot program, attendance data is collected directly from an existing online database via secured access and submission of user intent on Havard DataVerse Database. This real-world dataset was critical for training and validating the model.
 *   **Feature Engineering:** Building upon previous work, the model will use not only attendance records but also incorporate other socioeconomic and academic factors.
 *   **Machine Learning Models:** The predictive core will involve comparing and deploying different classification models to find the most accurate solution for the Malawi-specific context.
 *   **Model Validation:** Performance metrics such as precision, recall, and F1-score will be used to evaluate the model's effectiveness in accurately identifying at-risk students.
@@ -42,13 +42,13 @@ This project leverages a predictive analytics pipeline, adapting best practices 
 # Model Performance Highlights
 The system’s predictive engine (LSTM) has been optimized for the Malawian educational context, achieving high-reliability metrics in identifying at-risk students across 5 terms.
 
-***Overall Accuracy*** : 70% > The model demonstrates a strong ability to correctly classify student outcomes across the dataset.
+***Overall Accuracy***: 70% > The model demonstrates a strong ability to correctly classify student outcomes across the dataset.
 
 ***At-Risk Detection (Recall)***: 80% > Using an optimized sensitivity threshold, the system successfully identifies 8 out of 10 students who are actually at risk of dropping out, allowing for early intervention.
 
 ***Precision Stability***: 0.79 (Class 0)
 
-The model maintains high reliability in confirming students who are on a stable academic path, reducing unnecessary alarm for school administrators.
+The model maintains high reliability in confirming students who are on a stable academic path, reducing unnecessary alarms for school administrators.
 
 
 ### Why 5 Rounds?
@@ -58,7 +58,7 @@ The model utilizes a 5-term temporal window to ensure high predictive validity. 
 #  Repository Structure
 ```
 
-├── backend/ # Back-end API (Firebase)
+├── LiftEd-Malawi/ # Core container of the full stack machine project
   
 │ ├── app/ # Application logic
 │ ├── dashboard/ # website-optimized web app (React, Tailwind CSS) containing (headteacher, teacher, and PEA dashboards)
