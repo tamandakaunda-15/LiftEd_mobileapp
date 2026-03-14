@@ -195,11 +195,42 @@ If you wish to test the security hierarchy from scratch:
 
 # Live System Links
 
-[Full Stack Deployment](https://liftedmobileapp-production.up.railway.app)
+[Full Stack Deployment](https://liftedmobileapp-production.up.railway.app) : Railway (for both frontend and backend) 
 
-[ML API Documentation](https://lifted-dropout-api.onrender.com/docs)
+[ML API Documentation](https://lifted-dropout-api.onrender.com/docs) : Render (fo the api live testing with shap explainability)
 
 Database: Hosted on Supabase (PostgreSQL).
+
+
+# Analysis of Results vs. Project Objectives
+
+The primary objective of the LiftEd project was to develop a secure, end-to-end machine learning platform capable of predicting student dropout in Malawi to enable early interventions.
+
+### 1. Predictive Modeling
+ Objective Goal: Train a model to accurately identify students at risk of dropping out based on historical data.
+ 
+Result: Achieved with strategic trade-offs. The LSTM model successfully utilized a 5-term temporal window to capture dropout trajectories.
+
+During evaluation, we faced a standard machine learning trade-off between Precision and Recall. We purposefully tuned the classification threshold to 0.3, resulting in a Recall of 80% for the dropout class.
+
+Analysis: While this lowered overall accuracy to around 44% at that specific threshold (compared to 70% at a 0.4 threshold), it was a necessary and successful optimization. In the context of Malawian education, the cost of a "False Negative" (failing to identify a dropout) is catastrophic, whereas a "False Positive" (flagging a stable student for a check-in) simply results in a brief, harmless teacher intervention.
+
+### 2. Explainability and Intervention
+
+ObjectiveGoal: Provide teachers with actionable reasons why a student is at risk, rather than a "black-box" prediction.Result: Achieved. By integrating SHAP (SHapley Additive exPlanations), the system successfully maps predictions back to 15 top socio-economic and behavioral factors (e.g., "Payer: School Uniform" or "Rarely Completes Tasks").Analysis: 
+
+This transforms the platform from a purely analytical tool into a decision-support system, directly fulfilling the proposal's goal of enabling targeted, resource-efficient interventions by school administrators.
+
+### 3. Secure Governance
+Objective Goal: Protect sensitive student demographic data through strict access controls.
+
+Result: Achieved. The implementation of a multi-tier Role-Based Access Control (RBAC) system utilizing Supabase.
+
+Analysis: The top-down hierarchy (PEA registers Schools $\rightarrow$ Headteacher registers Teachers $\rightarrow$ Teachers access assigned Standards) successfully met the objective of modeling real-world Ministry of Education governance structures, ensuring data privacy at the classroom level.
+
+### Limitations and Future Scope
+
+While the objectives were largely met, the analysis revealed that predicting human behavior from socio-economic data contains inherent noise. The model's False Positive rate indicates that many students possess severe risk factors but demonstrate unmeasured resilience and do not drop out. Future iterations of this project could improve overall precision by incorporating real-time attendance tracking and continuous academic grading into the LSTM's temporal sequence.
 
 
 ##  Acknowledgements
