@@ -126,7 +126,7 @@ export default function StudentPredictorPage() {
     setIsPredicting(true);
     try {
       // 1. Call ML Engine
-      const response = await fetch("http://localhost:8000/predict", {
+      const response = await fetch(`${process.env.NEXT_PUBLIC_PREDICTION_API_URL}/predict`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ history }) 
